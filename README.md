@@ -1,21 +1,22 @@
 # ToDoApp
 
 
- Introduction
+1.Introduction
 
 This is todo application for adding content, delete contents edit and view existing contents for user. Also, the application includes Login and registration part for separate contents from user to user. Also, the application provides validation and error handling for better user experience.
 
-Technology Stack
- 	React used for developing frontend side of application.
- 	Typescript used for developing frontend part functionalities.
- 	Material UI used for enhancing frontend for better user experience.
- 	Ant design used for enhancing frontend for better user experience.
-  	Asp.net with C# used for developing backend API for the application.
- 	Bcrypt used for password-hashing function in login and signup.
- 	Sqlite used as main database of the application.
+2.Technology Stack
+
+React used for developing frontend side of application.
+Typescript used for developing frontend part functionalities.
+Material UI used for enhancing frontend for better user experience.
+Ant design used for enhancing frontend for better user experience.
+Asp.net with C# used for developing backend API for the application.
+Bcrypt used for password-hashing function in login and signup.
+Sqlite used as main database of the application.
 
 
-Components
+3.Components
 
 Login/Sign Up Part
 
@@ -28,7 +29,7 @@ If the user wants to edit or delete need to click that task card and edit and de
 Top right corner of application shows the username and if user needs to sign out need to click that user icon or username. Then automatically redirects to landing pages. Routes are protected and cannot access the home page without login.
 
 
-Instructions to Run
+4.Instructions to Run
 
 First, download both Frontend and Backend Folders. Open Frontend folder using Vscode or any ide and type npm start in terminal to frontend application. Then open todoapi.sln file using visual studio and start backend server. Then you can test the application.
 
