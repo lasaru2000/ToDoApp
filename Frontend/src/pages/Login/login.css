@@ -1,0 +1,250 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+
+.main{
+    background-color: rgb(51,51,51);
+    min-height: 100vh;
+    position: relative;
+
+}
+.main-container {
+    position: absolute;
+    flex-direction: column;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    min-height: 500px;
+
+   
+
+
+  }
+.left-part {
+   float: left;
+    width: 50%;
+    height: 500px;
+    background-color: rgb(56,56,56); /* Color for the left part */
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    transition: 0.3s;
+
+    
+
+}
+.left-part:hover {
+    z-index: 2; /* Increase z-index on hover to bring it to the front */
+    transform: scale(1.03); /* Optional: Apply a scale transformation for a zoom effect */
+    transition: 0.3s;
+
+  }
+
+.right-part {
+  float: right;
+    width: 50%;
+    height: 500px;
+    background-color:tomato; /* Color for the right part */
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    transition: 0.3s;
+}
+.right-part:hover {
+    z-index: 2; /* Increase z-index on hover to bring it to the front */
+    transform: scale(1.03); /* Optional: Apply a scale transformation for a zoom effect */
+    transition: 0.3s;
+  }
+
+
+
+.image{
+    width:450px;
+    height: 450px;
+    
+}
+
+.icon-name-left{
+ margin-top: 45%;
+ margin-left: 45%;
+  
+}
+.icon-name-right{
+    margin-top: 44%;
+    margin-left: 35%;
+     
+   }
+.logo{
+    color: rgb(240, 255, 255);
+    font-size: 80px !important;
+}
+.logo-nav{
+    color: rgb(240, 255, 255);
+    font-size: 40px !important;
+    margin-left: 20%;
+    margin-top: 20px;
+
+}
+.icon-name-left h1,.icon-name-right h1{
+    margin-top: 5px;
+    font-family: Agbalumo;
+    color: rgb(240, 255, 255);
+    font-size: 30px !important;
+    font-weight: 400;
+  
+  
+}
+.content-main-container{
+    position: absolute;
+    display: flex;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    min-height: 500px;
+}
+
+.login-part{
+    float: left;
+    width: 90%;
+    height: 500px;
+    background-color: rgb(56,56,56); /* Color for the left part */
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.navto-signup{
+    float: right;
+    display: flex;
+    width: 10%;
+    height: 500px;
+    background-color: tomato; /* Color for the right part */
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.signup-part{
+    float: right;
+    width: 90%;
+    height: 500px;
+    background-color: tomato; /* Color for the right part */
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.navto-login{
+    float: left;
+    display: flex;
+    width: 10%;
+    height: 500px;
+    background-color: rgb(56,56,56); /* Color for the left part */
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+    
+   
+}
+.login-part h1{
+    margin-top: 5px;
+    text-align: center;
+    color:tomato ;
+    font-family: Agbalumo;
+    font-size: 30px !important;
+    font-weight: 400;
+}
+.signup-part h1{
+    margin-top: 5px;
+    text-align: center;
+    color: rgb(56,56,56);
+    font-family: Agbalumo;
+    font-size: 30px !important;
+    font-weight: 400;
+}
+.login-part h2{
+    margin-top: 5px;
+    text-align: center;
+    color:tomato ;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px ;
+    font-weight: 400;
+}
+.signup-part h2{
+    margin-top: 5px;
+    text-align: center;
+    color: rgb(56,56,56);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px ;
+    font-weight: 400;
+}
+.stylish-input,.signup-input {
+    margin-top: 3px;
+    margin-left: 10px;
+    border-color: #fcfafa;
+    border-radius: 7px;
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    height: 20px;
+    outline: none;
+    box-shadow: none;
+    border-width: 2px;
+    transition: border-color 0.2s;
+  }
+
+  .d::placeholder {
+    color: #95a5a6;
+  }
+  .signup-input:hover {
+    border-color:rgb(56,56,56);
+    box-shadow: none;
+
+  }
+  .signup-input:focus {
+    border-color:rgb(56,56,56);
+    box-shadow: none;
+  }
+
+
+  .stylish-input::placeholder {
+    color: #95a5a6;
+  }
+  .stylish-input:hover {
+    border-color: #e74c3c;
+    box-shadow: none;
+
+  }
+  .stylish-input:focus {
+    border-color: #e74c3c;
+    box-shadow: none;
+  }
+
+  .login-container {
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+  }
+  .input{
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  .button {
+    width: 150px;
+    height: 40px;
+    margin-top: 20px;
+    background-color: tomato;
+    color: white;
+    box-shadow: none;
+    border-radius: 10px;
+    transition: border-color 0.2s;
+  }
+  .button-signup {
+    width: 150px;
+    height: 40px;
+    margin-top: 20px;
+    background-color:rgb(56,56,56);
+    color: white;
+    box-shadow: none;
+    border-radius: 10px;
+    transition: border-color 0.2s;
+  }

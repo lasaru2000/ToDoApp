@@ -1,0 +1,247 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+
+.mainadd{
+    background-color: rgb(51,51,51);
+    min-height: 100vh;
+    position: relative;
+
+
+}
+
+.user{
+  position: absolute;
+  padding-top: 20px;
+  padding-left: 88%;
+  display: flex;
+  cursor: pointer;
+}
+.user h1{
+  font-family: agbalumo;
+  font-size: 20px;
+  margin-left: 10px;
+  color: tomato;
+
+}
+.user-icon{
+  color: azure;
+  font-size: 35px !important;
+}
+.main-conatiner{
+    left:50%;
+    transform: translateX(-50%);
+    position: absolute;
+    overflow:auto;
+    scroll-behavior: smooth;
+    height: 100%;
+}
+::-webkit-scrollbar { 
+  display: none; 
+  }
+.add-container{
+  transform: translateY(20%);
+  width:700px;
+  height: 200px;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(68,68,68);
+  transition: background-color 0.3s ease;
+}
+
+
+.existing-container{
+    margin-top: 60px;
+    width:700px;
+   min-height: 200px;
+    border-radius: 20px;
+    background-color: rgb(68,68,68);
+    padding-bottom: 20px;
+
+  }
+
+.add-compo{
+  padding-top: 10px;
+    padding-left: 15px;
+}
+
+.add-compo h1{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: white;
+  padding-top: 5px;
+  font-weight:500;
+}
+  .stylish-inputadd {
+    margin-top: 5px;
+    border-color: #fcfafa;
+    border-radius: 7px;
+    padding: 10px;
+    font-size: 16px;
+    width: 500px;
+    height: 20px;
+    outline: none;
+    box-shadow: none;
+    border-width: 2px;
+    transition: border-color 0.2s;
+  }
+  
+  .stylish-inputadd::placeholder {
+    color: #95a5a6;
+  }
+  .stylish-inputadd:hover {
+    border-color: #e74c3c;
+    box-shadow: none;
+
+  }
+  .stylish-inputadd:focus {
+    border-color: #e74c3c;
+    box-shadow: none;
+
+  }
+  
+  .textarea{
+    margin-top: 5px;
+    border-color: #fcfafa;
+    border-radius: 7px;
+    padding: 10px;
+    font-size: 16px;
+    width: 500px;
+    height: 20px;
+    outline: none;
+    box-shadow: none;
+    border-width: 2px;
+    color: black;
+    transition: border-color 0.2s;
+
+  }
+
+  .textarea::placeholder {
+    color: #95a5a6;
+  }
+  .textarea:hover {
+    border-color: #e74c3c;
+    box-shadow: none;
+
+  }
+  .textarea:focus {
+    border-color: #e74c3c;
+    box-shadow: none;
+  }
+
+  .selecter{
+    margin-left: 35px;
+    border-radius: 7px;
+    height: 25px;
+    outline: none;
+    box-shadow: none;
+    border-width: 2px;
+    transition: border-color 0.2s;
+  }
+
+  .selecter::placeholder {
+    color: #020202;
+  }
+  
+
+
+.button {
+  width: 90px;
+  height: 40px;
+  margin-left: 25px;
+  margin-top: 20px;
+  background-color: tomato;
+  color: white;
+  box-shadow: none;
+  border-radius: 10px;
+  transition: border-color 0.2s;
+}
+
+.button:hover {
+  background-color: tomato;
+
+  
+
+}
+.card {
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 650px;
+  height: 180px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  top:10px;
+  left: 20px;
+  margin-top: 7px;
+  position: relative; 
+  z-index: 2; /* Initial z-index value */
+}
+
+.card:hover {
+  z-index: 1; /* Increase z-index on hover to bring it to the front */
+  transform: scale(1.03); /* Optional: Apply a scale transformation for a zoom effect */
+}
+.card h1{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  color: tomato;
+  font-weight:500;
+  margin-top: 20px;
+  margin-left: 10px;
+  max-width: 600px;
+}
+
+.filled-circle {
+  width: 10px; 
+  height: 10px; 
+  border-radius: 50%; 
+  margin-top: 23px;
+  margin-right: 15px;
+}
+
+
+.card p{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight:500;
+  margin-left: 10px;
+  margin-top: 5px;
+  color: rgb(235, 220, 201);
+}
+.button1 {
+  width: 65px;
+  height: 30px;
+  background-color: tomato;
+  color: white;
+  box-shadow: none;
+  border-radius: 10px;
+  transition: border-color 0.2s;
+  text-align: center;
+  margin-left: 5px;
+}
+.buttons{
+  margin-left: 5px;
+  margin-top: 5px;
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+.null-data-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.null-data-message img{
+  width:100px;
+  height: 100px;
+}
