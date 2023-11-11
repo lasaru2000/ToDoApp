@@ -180,12 +180,12 @@
   left: 20px;
   margin-top: 7px;
   position: relative; 
-  z-index: 2; /* Initial z-index value */
+  z-index: 2; 
 }
 
 .card:hover {
-  z-index: 1; /* Increase z-index on hover to bring it to the front */
-  transform: scale(1.03); /* Optional: Apply a scale transformation for a zoom effect */
+  z-index: 1; 
+  transform: scale(1.03); 
 }
 .card h1{
   font-family: 'Montserrat', sans-serif;

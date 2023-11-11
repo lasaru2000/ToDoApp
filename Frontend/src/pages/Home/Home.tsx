@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Home.css';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Input, Select, Button,message } from 'antd';
+import { Input, Select, Button,message ,Modal} from 'antd';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import nodata from "../../assets/nodata.png";
 
@@ -50,12 +50,22 @@ const{ id, name } = location.state;
       label: 'Low',
     },
   ];
+  // scroll to top main container when clicked edit button
+  const scrollToTop = () => {
+    const mainContainer = document.querySelector('.main-conatiner');
+    if (mainContainer) {
+      mainContainer.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   // get data from the server according to user id
     const fetchData = async () => {
       try {
         // The URL from which you want to fetch data
-        const apiUrl = `https://localhost:7027/api/content/${id}`;
+        const apiUrl = `/api/content/${id}`;
         const response = await axios.get(apiUrl);
         setTextData(response.data);
       } catch (error) {
@@ -74,7 +84,7 @@ const{ id, name } = location.state;
         return;
       }
       try {
-        const apiUrl = 'https://localhost:7027/api/content';
+        const apiUrl = '/api/content';
         const response = await axios.post(apiUrl, inputData);
         setTextData([...textData, response.data]);
         setInputData((prevInputData) => ({
@@ -104,6 +114,7 @@ const{ id, name } = location.state;
     setEditedCardIndex(index);
     setInputData(textData[index]); // Set input data with the data of the card being edited
     toggleButtons(index);
+    scrollToTop();
   };
 
 
@@ -111,8 +122,8 @@ const{ id, name } = location.state;
   const handleSaveClick = async () => {
     if (editedCardIndex !== null) {
       try {
-        const apiUrl = `https://localhost:7027/api/content/${textData[editedCardIndex].contentId}`;
-        const response = await axios.put(apiUrl, inputData); // Send the updated data to the server
+        const apiUrl = `/api/content/${textData[editedCardIndex].contentId}`;
+        const response = await axios.put(apiUrl, inputData);
         const updatedData = [...textData];
         updatedData[editedCardIndex] = response.data;
         setTextData(updatedData);
@@ -133,18 +144,25 @@ const{ id, name } = location.state;
   };
 
   //delete seleted card according card index
-  const handleDeleteClick = async (index: number) => {
-    if (window.confirm('Are you sure you want to delete this item?')) {
-      try {
-        const apiUrl = `https://localhost:7027/api/content/${textData[index].contentId}`;
-        await axios.delete(apiUrl);
-        const updatedData = textData.filter((item, i) => i !== index);
-        setTextData(updatedData);
-        success("Successfully Deleted content!!")
-      } catch (error) {
-        console.error('Error deleting data:', error);
-      }
-    }
+  const handleDeleteClick = (index: number) => {
+    Modal.confirm({
+      title: 'Are you sure you want to delete this item?',
+      content: 'This action cannot be undone.',
+      onOk: async () => {
+        try {
+          const apiUrl = `/api/content/${textData[index].contentId}`;
+          await axios.delete(apiUrl);
+          const updatedData = textData.filter((item, i) => i !== index);
+          setTextData(updatedData);
+          success('Successfully Deleted content!!');
+        } catch (error) {
+          console.error('Error deleting data:', error);
+        }
+      },
+      onCancel: () => {
+        console.log('Deletion canceled');
+      },
+    });
   };
   
   // cansel edit content and clean inputs
@@ -215,7 +233,7 @@ const getPriorityColor = (priority: string) => {
     case 'Low':
       return '#3df556';
     default:
-      return 'black'; // You can set a default color for other cases
+      return 'black'; 
   }
 };
 
@@ -322,7 +340,6 @@ const getPriorityColor = (priority: string) => {
     ))
   ) : (
     <div className="null-data-message">
-      {/* Add the content you want to display when textData is null */}
      <img  src={nodata} alt='No data'/>
     </div>
   )}

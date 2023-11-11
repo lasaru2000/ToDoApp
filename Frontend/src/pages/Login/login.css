@@ -27,7 +27,7 @@
    float: left;
     width: 50%;
     height: 500px;
-    background-color: rgb(56,56,56); /* Color for the left part */
+    background-color: rgb(56,56,56); 
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     transition: 0.3s;
@@ -36,8 +36,8 @@
 
 }
 .left-part:hover {
-    z-index: 2; /* Increase z-index on hover to bring it to the front */
-    transform: scale(1.03); /* Optional: Apply a scale transformation for a zoom effect */
+    z-index: 2; 
+    transform: scale(1.03); 
     transition: 0.3s;
 
   }
@@ -46,14 +46,14 @@
   float: right;
     width: 50%;
     height: 500px;
-    background-color:tomato; /* Color for the right part */
+    background-color:tomato; 
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     transition: 0.3s;
 }
 .right-part:hover {
-    z-index: 2; /* Increase z-index on hover to bring it to the front */
-    transform: scale(1.03); /* Optional: Apply a scale transformation for a zoom effect */
+    z-index: 2; 
+    transform: scale(1.03); 
     transition: 0.3s;
   }
 
@@ -109,7 +109,7 @@
     float: left;
     width: 90%;
     height: 500px;
-    background-color: rgb(56,56,56); /* Color for the left part */
+    background-color: rgb(56,56,56);
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
 }
@@ -118,7 +118,7 @@
     display: flex;
     width: 10%;
     height: 500px;
-    background-color: tomato; /* Color for the right part */
+    background-color: tomato;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
 }
@@ -126,7 +126,7 @@
     float: right;
     width: 90%;
     height: 500px;
-    background-color: tomato; /* Color for the right part */
+    background-color: tomato; 
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
 }
@@ -135,7 +135,7 @@
     display: flex;
     width: 10%;
     height: 500px;
-    background-color: rgb(56,56,56); /* Color for the left part */
+    background-color: rgb(56,56,56); 
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
 

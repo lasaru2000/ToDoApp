@@ -95,9 +95,8 @@ function Login() {
 
     }
     try {
-      const apiUrl = 'https://localhost:7027/api/user/signup';
-      const response = await axios.post(apiUrl, inputData); // Send the inputData to the server
-      success("Sign Up Success!!");
+      const apiUrl = '/api/user/signup';
+      const response = await axios.post(apiUrl, inputData);
       setInputData({
         id: '3fa85f64-5717-4562-b3fc-2c963f66afa6',
         name: '',
@@ -120,8 +119,8 @@ function Login() {
     }
     try {
 
-      const apiUrl = 'https://localhost:7027/api/user/login';
-      const response = await axios.post(apiUrl, inputData); // Send the inputData to the server
+      const apiUrl = '/api/user/login';
+      const response = await axios.post(apiUrl, inputData); 
       if(response.status === 200){
         localStorage.setItem("message",response.data.message);
         navigate('/home', { 

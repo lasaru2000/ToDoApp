@@ -1,3 +1,0 @@
-Instructions to Run
-
-First, download both Frontend and Backend Folders. Open Frontend folder using Vscode or any ide and type npm start in terminal to frontend application. Then open todoapi.sln file using visual studio and start backend server. Then you can test the application.
